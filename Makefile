@@ -7,9 +7,6 @@ TURBO_ARGS = --concurrency=100%
 build:  # builds all codebases
 	env $(YARN_ARGS) yarn exec --silent -- turbo run build $(TURBO_ARGS)
 
-rebuild:  # rebuilds all codebases even if their already exist
-	env $(YARN_ARGS) yarn exec --silent -- turbo run build --force $(TURBO_ARGS)
-
 clean:  # remove all build artifacts
 	env $(YARN_ARGS) yarn exec --silent -- turbo run clean $(TURBO_ARGS)
 	find . -name .turbo -type d | xargs rm -rf
@@ -46,9 +43,6 @@ ps:  # pitstop
 test:  # runs all tests cached
 	env $(YARN_ARGS) yarn exec --silent -- turbo run test $(TURBO_ARGS)
 .PHONY: test
-
-retest:  # runs all tests uncached
-	env $(YARN_ARGS) yarn exec --silent -- turbo run test --force $(TURBO_ARGS)
 
 update:  # updates the dependencies for the entire mono-repo
 	yarn upgrade-interactive --latest
