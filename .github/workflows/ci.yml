@@ -18,5 +18,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: echo "./node_modules/.bin" >> $GITHUB_PATH
+      - run: corepack enable
       - run: make setup
       - run: make test

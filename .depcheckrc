@@ -7,6 +7,9 @@ ignores:
   - custom-action-esm
   - custom-action-typescript
   - shared-cucumber-steps
+  - eslint-plugin-simple-import-sort
+  - eslint-plugin-typescript-sort-keys
+  - prettier-plugin-packagejson
   - text-runner
   - text-runner-core
   - text-runner-features

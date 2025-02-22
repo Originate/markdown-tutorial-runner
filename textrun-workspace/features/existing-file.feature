@@ -57,8 +57,8 @@ Feature: verifying file content
       """
     When calling Text-Runner
     Then it emits these events:
-      | FILENAME | LINE | ACTION                  | STATUS | ERROR TYPE | ERROR MESSAGE            | GUIDANCE                                                                            |
-      | 1.md     | 1    | workspace/existing-file | failed | UserError  | file not found: zonk.txt | the workspace has these files: 1.md, node_modules, package.json, tmp, tsconfig.json |
+      | FILENAME | LINE | ACTION                  | STATUS | ERROR TYPE | ERROR MESSAGE            | GUIDANCE                                                              |
+      | 1.md     | 1    | workspace/existing-file | failed | UserError  | file not found: zonk.txt | the workspace has these files: 1.md, package.json, tmp, tsconfig.json |
 
 
   Scenario: setting the base directory

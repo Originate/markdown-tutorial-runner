@@ -5,3 +5,4 @@ npm-debug.log
 test-dir
 tmp
 tools
+.yarn
